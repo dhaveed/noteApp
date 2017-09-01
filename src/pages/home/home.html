@@ -1,14 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar color="primary">
+		<ion-title text-md>
+			Notes
+		</ion-title>
+	
+		<ion-buttons end>
+			<button ion-button icon-only (click)="addNote()">
+				<ion-icon name="add"></ion-icon>
+			</button>
+			<button ion-button icon-only (click)="showPop1($event)">
+				<ion-icon name="more"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+	<section class="empty" *ngIf="noNote">
+		<div class="empty-content" text-muted>
+			<ion-icon class="empty-icon" name="ios-paper-outline"></ion-icon>
+			<p align="center" class="empty-text">You do not have any notes! Click the + to make a new note</p>
+		</div>
+		
+	</section>
 </ion-content>

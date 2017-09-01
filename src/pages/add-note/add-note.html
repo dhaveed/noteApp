@@ -1,0 +1,42 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>Edit Title</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-only (click)="more($event)">
+				<ion-icon name="more"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<div class="stats" padding>
+      <span pull-left class="stats-left">
+        {{note.length}} / 1000
+      </span>
+      
+      <span class="stats-right" align>
+        {{fulldate}} {{time}}
+      </span>
+    </div>
+	<!-- <div class="stats" padding-bottom>
+		<span class="wordcount">
+			0 / 1000
+		</span>
+		<span class="ts" end>
+			<span class="date">
+				8/31/17
+			</span>
+			<span class="time">
+				12:22
+			</span>
+		</span>
+	</div> -->
+	<textarea type="text" value="" class="main" id="main" max="100" [(ngModel)]="note" maxlength="1000"></textarea>
+	<!-- <div *ngIf="note.length >= 1000" ng>
+		{{isset ? maxLimToast() : ''}}
+	</div> -->
+</ion-content>

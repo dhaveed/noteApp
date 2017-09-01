@@ -1,0 +1,29 @@
+page-add-note {
+	.scroll-content{
+		overflow: hidden !important;
+	}
+	.stats{
+		display: flex;
+	}
+	.stats-left{
+		text-align: left !important;
+		flex: 1;
+	}
+	.stats-right{
+		justify-content: right;
+	}
+	textarea.main{
+		width: 100vw;
+		word-break: break-word;
+		resize: none;
+		height: 85vh;
+		border: none;
+		width: 100vw;
+		padding: 0 10px 0 12px;	
+	}
+	.stats{
+		position: relative;
+		background: white;
+	}
+
+}
